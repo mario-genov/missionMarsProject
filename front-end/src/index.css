@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
+
+/* base styles */
+* {
+  margin: 0;
+  font-family: "Audiowide";
+  color: white;
+}
+
+.content {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+.App {
+  background-color: #140204;
+}
+
+.loading {
+  font-size: x-large;
+  font-weight: bold;
+  color: #f7b283;
+  height: 100vh;
+}
+
+.error {
+  font-size: larger;
+  color: #f7b283;
+  height: 100vh;
+}
