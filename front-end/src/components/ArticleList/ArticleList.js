@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import styles from './ArticleList.module.css';
 
 const ArticleList = ({ articles, title }) => {
@@ -7,8 +8,10 @@ const ArticleList = ({ articles, title }) => {
       <h2>{ title }</h2>
       {articles.map(article => (
         <div className={styles.blogPreview} key={article._id}>
-          <h2>{ article.title }</h2>
-          <p>Written by { article.userName }</p>
+          <Link to={`/article/${article._id}`}>
+            <h2>{ article.title }</h2>
+            <p>Written by { article.userName }</p>
+          </Link>
         </div>
       ))}
     </div>
