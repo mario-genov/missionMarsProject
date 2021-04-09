@@ -17,7 +17,7 @@ function App() {
             <Route path="/create">
               <NewArticle />
             </Route>
-            <Route path="article/:id">
+            <Route path="/articles/:id">
               <ArticleDetails />
             </Route>
           </Switch>

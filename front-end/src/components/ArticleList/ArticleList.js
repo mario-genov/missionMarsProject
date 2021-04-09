@@ -8,7 +8,7 @@ const ArticleList = ({ articles, title }) => {
       <h2>{ title }</h2>
       {articles.map(article => (
         <div className={styles.blogPreview} key={article._id}>
-          <Link to={`/article/${article._id}`}>
+          <Link to={`/articles/${article._id}`}>
             <h2>{ article.title }</h2>
             <p>Written by { article.userName }</p>
           </Link>

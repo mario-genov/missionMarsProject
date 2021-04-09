@@ -1,3 +1,52 @@
-.articleDetails {
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,300;1,400&display=swap');
+
+.articleDetails h2 {
+  color: coral;
+}
+
+.articleDetails h2::selection {
+  color: #f7b283;
+}
+
+.articleDetails p {
+  font-family: 'Roboto';
+  padding: 7px 0;
+  margin: 7px 0;
+}
+
+.articleDetails p::selection {
+  color: #f7b283;
+}
+
+.userName {
+  font-family: 'Roboto';
   font-style: italic;
+  color: coral;
+}
+
+.userName::selection {
+  color: #f7b283;
+}
+
+.articleDetails img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  object-fit: cover;
+  border-radius: 8%;
+}
+
+.articleDetails img:hover {
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+}
+
+.articleDetails div {
+  font-family: 'Roboto';
+  margin-top: 15px;
+}
+
+.articleDetails div::selection {
+  color: #f7b283;
 }
