@@ -7,7 +7,7 @@ const createError = (err) => ({
 
 export function createArticle(req, res) {
     // console.log(req.token);
-    const {userName} = req.token;
+    const { userName } = req.token;
     save({...req.body, userName})
         .then((result) => res.json(result))
         .catch((err) => res.status(400).json(createError(err)));

@@ -1,10 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,300;1,400&display=swap');
 
 .articleDetails h2 {
+  font-size: 25px;
+  margin-bottom: 12px;
   color: coral;
 }
 
-.articleDetails h2::selection {
+.articleDetails h2::selection, .articleDetails div::selection, .articleDetails p::selection, .userName::selection{
   color: #f7b283;
 }
 
@@ -14,18 +16,10 @@
   margin: 7px 0;
 }
 
-.articleDetails p::selection {
-  color: #f7b283;
-}
-
 .userName {
   font-family: 'Roboto';
   font-style: italic;
   color: coral;
-}
-
-.userName::selection {
-  color: #f7b283;
 }
 
 .articleDetails img {
@@ -44,9 +38,5 @@
 
 .articleDetails div {
   font-family: 'Roboto';
-  margin-top: 15px;
-}
-
-.articleDetails div::selection {
-  color: #f7b283;
+  margin: 15px 0;
 }

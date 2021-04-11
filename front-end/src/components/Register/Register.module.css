@@ -1,33 +1,33 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,300;1,400&display=swap');
 
-.newArticle {
-  max-width: 600px;
+.register {
+  max-width: 350px;
   margin: 0 auto;
   text-align: center;
 }
 
-.newArticle label {
+.register label {
   font-size: 28px;
   text-align: left;
   display: block;
   margin: 5px 0;
 }
 
-.newArticle label:hover {
+.register label:hover {
   color: #972d29;
 }
 
-.newArticle h2 {
+.register h2 {
   font-size: 35px;
   color: #f7b283;
   margin-bottom: 30px;
 }
 
-.newArticle h2::selection, .newArticle label::selection {
+.register h2::selection, .register label::selection {
   color: #71d300;
 }
 
-.newArticle input, .newArticle textarea {
+.register input, .register textarea {
   width: 100%;
   padding: 6px 10px;
   border: 2px solid coral;
@@ -39,16 +39,16 @@
   background-color: burlywood;
 }
 
-.newArticle input:focus, .newArticle textarea:focus {
+.register input:focus, .register textarea:focus {
   border: 2px dashed crimson;
   outline: none;
 }
 
-.newArticle input:valid, .newArticle textarea:valid {
+.register input:valid, .register textarea:valid {
   border: 2px solid #71d300;
 }
 
-.newArticle button {
+.register button {
   background-color: coral;
   color: black;
   font-size: 28px;
@@ -59,12 +59,12 @@
   margin-top: 15px;
 }
 
-.newArticle button:hover {
+.register button:hover {
   background-color: darkred;
   color: whitesmoke;
   border: 2px solid coral;
 }
 
-.newArticle button::selection {
+.register button::selection {
   outline: transparent;
 }

@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,300;1,400&display=swap');
+
 .blogPreview {
   padding: 10px 16px;
   margin: 20px;
@@ -9,12 +11,20 @@
 }
 
 .blogPreview h2 {
-  font-size: 20px;
-  /* color: #b12d21; */
+  font-size: 28px;
   color: #f7b283;
   margin-bottom: 8px;
 }
 
 .blogPreview a {
   text-decoration: none;
+}
+
+.blogPreview p {
+  font-size: 21px;
+  font-family: 'Roboto';
+}
+
+.articleList {
+  font-size: 26px;
 }

@@ -1,33 +1,39 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,300;1,400&display=swap');
 
-.newArticle {
-  max-width: 600px;
+.login {
+  max-width: 320px;
   margin: 0 auto;
   text-align: center;
 }
 
-.newArticle label {
+.login h1 {
+  font-size: 35px;
+  color: #f7b283;
+  margin-bottom: 30px;
+}
+
+.login form label {
   font-size: 28px;
   text-align: left;
   display: block;
   margin: 5px 0;
 }
 
-.newArticle label:hover {
+.login p {
+  text-align: center;
+  font-size: 28px;
+  margin-top: 70px;
+}
+
+.login form label:hover, .login p:hover{
   color: #972d29;
 }
 
-.newArticle h2 {
-  font-size: 35px;
-  color: #f7b283;
-  margin-bottom: 30px;
-}
-
-.newArticle h2::selection, .newArticle label::selection {
+.login form label::selection, .login p::selection, .login h1::selection {
   color: #71d300;
 }
 
-.newArticle input, .newArticle textarea {
+.login input {
   width: 100%;
   padding: 6px 10px;
   border: 2px solid coral;
@@ -39,16 +45,19 @@
   background-color: burlywood;
 }
 
-.newArticle input:focus, .newArticle textarea:focus {
+.login input:focus {
   border: 2px dashed crimson;
   outline: none;
 }
 
-.newArticle input:valid, .newArticle textarea:valid {
+.login input:valid {
   border: 2px solid #71d300;
 }
 
-.newArticle button {
+.login button, .login a {
+  display: block;
+  margin: auto;
+  width: 50%;
   background-color: coral;
   color: black;
   font-size: 28px;
@@ -59,12 +68,12 @@
   margin-top: 15px;
 }
 
-.newArticle button:hover {
+.login button:hover, .login a:hover {
   background-color: darkred;
   color: whitesmoke;
   border: 2px solid coral;
 }
 
-.newArticle button::selection {
+.login button::selection, .login a::selection {
   outline: transparent;
 }

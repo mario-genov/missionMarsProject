@@ -4,7 +4,7 @@ import styles from './ArticleList.module.css';
 const ArticleList = ({ articles, title }) => {
  
   return ( 
-    <div className="ArticleList">
+    <div className={styles.articleList}>
       <h2>{ title }</h2>
       {articles.map(article => (
         <div className={styles.blogPreview} key={article._id}>
