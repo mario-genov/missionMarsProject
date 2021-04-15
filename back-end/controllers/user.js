@@ -1,45 +1,39 @@
-import { save as userSave, userExist } from '../models/user';
-import { save as authSave } from '../models/auth';
-import md5 from 'md5';
+import { save as userSave, userExist } from "../models/user";
+import { save as authSave } from "../models/auth";
+import md5 from "md5";
 
 export function createUser(req, res) {
-    
-    const user = req.body;
+  const user = req.body;
 
-    if (user.password.length < 6) {
-        return res
-            .status(400)
-            .json({
-                status: 'error',
-                message: 'Password must be longer that 6 symbols!',
-            });
-    }
+  if (user.password.length < 6) {
+    return res.status(400).json({
+      status: "error",
+      message: "Password must be longer that 6 symbols!",
+    });
+  }
 
-    const passHash = md5(user.password);
-    // console.log(passHash);
+  const passHash = md5(user.password);
 
-    userExist(user.userName)
-        .then((result) => {
-            // console.log(result);
+  userExist(user.userName)
+    .then((result) => {
+      if (result !== null) {
+        return res.status(400).json({
+          status: "error",
+          message: "User already exist!",
+        });
+      }
 
-            if (result !== null) {
-                return res.status(400).json({
-                    status: 'error',
-                    message: 'User already exist!',
-                });
-            }
-
-            return Promise.all([
-                userSave({
-                    fullName: user.fullName,
-                    email: user.email,
-                    _id: user.userName,
-                }),
-                authSave({
-                    _id: user.userName,
-                    passHash,
-                }),
-            ]).then(() => res.json({ status: 'ok' }));
-        })
-        .catch((err) => res.status(400).json(err));
+      return Promise.all([
+        userSave({
+          fullName: user.fullName,
+          email: user.email,
+          _id: user.userName,
+        }),
+        authSave({
+          _id: user.userName,
+          passHash,
+        }),
+      ]).then(() => res.json({ status: "ok" }));
+    })
+    .catch((err) => res.status(400).json(err));
 }
